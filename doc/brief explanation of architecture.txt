@@ -1,0 +1,46 @@
+Brief Explanation of Architectural Decisions:
+1. N-Tier Architecture:
+
+- I'm using N-tier architecture, which promotes separation of concerns and scalability.
+- API Layer: Handles HTTP requests and responses, exposing endpoints to interact with the system.
+- Application Layer: Contains business logic and orchestrates data flow between the API and lower layers.
+- Domain Layer: Defines core business models (User, Product, CartItem) and business rules.
+- Persistence Layer: Handles database interactions, ensuring data is stored and retrieved efficiently.
+
+2. Repository Pattern:
+
+- Abstract database operations using the Repository Pattern to keep the persistence logic separate from business logic.
+
+3. Fluent Validation:
+
+- FluentValidation to enforce validation rules at the application level, ensuring data integrity before processing requests.
+- This keeps validation logic clean and reusable.
+
+4. ILogger for Logging:
+
+- Integrated ILogger for logging, enabling better monitoring, debugging, and auditing.
+- This improves maintainability and helps in troubleshooting issues.
+
+Potential Improvements:
+
+1. Implement Unit of Work
+
+- Use Unit of Work to manage transactions efficiently.
+
+2. Role-Based Authorization:
+
+- Extend JWT authentication by implementing Role-Based Access Control (RBAC) to restrict access to specific API endpoints.
+
+3. Exception Handling Middleware:
+
+- Implement a global exception handling middleware to standardize error responses and improve debugging.
+
+4. Centralize Logging
+
+- Use a Logging Framework like Serilog
+- Provides a single source of truth for logs across all layers (API, Application, Persistence).
+
+5. Unit Testing
+
+- Use xUnit for structured unit testing.
+- Mock dependencies using Moq to isolate business logic.
