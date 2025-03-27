@@ -23,7 +23,7 @@ Ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-repo/shopping-cart-api.git
+git clone https://github.com/ZinPhyo/ShoppingCart.git
 cd shopping-cart-api
 ```
 
